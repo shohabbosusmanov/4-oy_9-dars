@@ -5,7 +5,6 @@ import { BookModule } from './modules/book/book.module';
 import { ReviewModule } from './modules/review/review.module';
 import { CommentModule } from './modules/comment/comment.module';
 import { ConfigModule } from '@nestjs/config';
-import { ExceptionsHandler } from '@nestjs/core/exceptions/exceptions-handler';
 import { PrismaService } from './prisma.service';
 
 @Module({
@@ -14,6 +13,6 @@ import { PrismaService } from './prisma.service';
     isGlobal: true
   })],
   controllers: [],
-  providers: [ExceptionsHandler, PrismaService],
+  providers: [PrismaService],
 })
 export class AppModule { }
